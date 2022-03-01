@@ -1,5 +1,5 @@
 import React from "react";
-import NavItems from "./Nav-items";
+import NavRows from "./Nav-items";
 import styled from "styled-components";
 export const NavContainer = styled.div`
   background-color: #52489C;
@@ -13,10 +13,10 @@ export const NavContainer = styled.div`
 const Nav = () => {
   return (
     <NavContainer>
-      <NavItems title="Home" />
-      <NavItems title="Prices" />
-      <NavItems title="About" />
-      <NavItems title="Login" />
+      <NavRows title="Home" />
+      <NavRows title="Prices" />
+      <NavRows title="About" />
+      <NavRows title="Login" />
     </NavContainer>
   );
 };
