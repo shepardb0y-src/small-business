@@ -5,6 +5,7 @@ import Home from "./pages/Home.js";
 import Services from "./pages/Services.js";
 import About from "./pages/About.js";
 import Login from "./pages/Login.js";
+import Data from "./pages/Data.js";
 import {Routes , Route} from 'react-router-dom'
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path='/Services' element={<Services/>}/>
           <Route path='/About' element={<About/>}/>
           <Route path='/Login' element={<Login/>}/>
+          <Route path='/Admin' element={<Data/>}/>
           </Routes>
         <Footer/>
     

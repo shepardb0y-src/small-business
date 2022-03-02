@@ -29,6 +29,9 @@ const Nav = () => {
       <Link to="/about">
         <NavRows title="About" />
       </Link>
+      <Link to="/Admin">
+        <NavRows title="Data" />
+      </Link>
       <Link to="/login">
         <NavRows title="Login" />
       </Link>
