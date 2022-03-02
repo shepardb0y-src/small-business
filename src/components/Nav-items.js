@@ -8,9 +8,7 @@ export const NavContainerh1 = styled.div`
   height: 50px;
   border: 3px solid black;
   border-radius: 50%;
-  overflow: wrap;
-
-  
+  overflow: wrap; 
 `;
 const NavItems = ({ title }) => {
   return (
