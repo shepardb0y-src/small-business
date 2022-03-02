@@ -11,6 +11,10 @@ export const NavContainer = styled.div`
   border: black solid 1px;
   box-shadow: 10px 5px 5px black;
   z-index: 99;
+  text-decoration: none;
+  position:sticky;
+  
+  top:0;
 `;
 
 const Nav = () => {
