@@ -1,13 +1,13 @@
-import { Container } from "./components/Container.styled.js";
+import GlobalStyle from "./components/GlobalStyles.js";
 import Nav from "./components/Nav.js";
 import Main from "./components/Main.js";
 function App() {
   return (
     <div className="App">
-      <Container>
+      <GlobalStyle/>
         <Nav />
         <Main />
-      </Container>
+    
     </div>
   );
 }

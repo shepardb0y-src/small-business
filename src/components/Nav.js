@@ -3,7 +3,9 @@ import NavRows from "./Nav-items";
 import styled from "styled-components";
 export const NavContainer = styled.div`
   background-color: #52489c;
-
+  width: fit-content
+  block-size: fit-content
+  
   display: flex;
   font-size: 3em;
   justify-content: space-around;

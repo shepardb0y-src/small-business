@@ -1,7 +1,7 @@
-import styled from "styled-components";
 
+import { createGlobalStyle } from "styled-components";
 //global style
-export const Container = styled.div`
+ const GlobalStyle = createGlobalStyle`
   * {
     diplay: flex;
     padding: 0;
@@ -9,5 +9,8 @@ export const Container = styled.div`
     justify-conetent: center;
     align-items: center;
     // max-width: 80%;
+  //  border: 10px solid red;
   }
 `;
+
+export default GlobalStyle;
