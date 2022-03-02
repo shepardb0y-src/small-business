@@ -3,7 +3,6 @@ import Main from "../components/Main";
 const Home = () => {
   return (
     <div>
-    
       <Main />
     </div>
   );
