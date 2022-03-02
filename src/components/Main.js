@@ -16,7 +16,7 @@ export const Image = styled.img`
   //   border: 10px red solid;
   width: 50%;
   height: 50%;
-  background-color: #ebebeb;
+  background-color: #EBEBEB;
   
 `;
 const Main = () => {
