@@ -1,14 +1,18 @@
 import React from "react";
 import styled from "styled-components";
+import Input from "../components/Inputs";
+import Button from "../components/Button";
+import Icon from "../components/Icons";
+import {FaFacebookF, FaInstagram, FaTwitter} from 'react-icons/fa'
 
-const LoginContainer= styled.div`
-display:flex;
-justify-content:center;
-align-items:center;
-background-color:#EBEBEB;
-`
-const LoginFormContainer= styled.div`
-display: flex;
+const LoginContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: lightblue url("https://cdn.dribbble.com/users/19849/screenshots/14040157/media/168ee88f36ba350db5e001e1f7161a4d.png") no-repeat fixed center;
+`;
+const LoginFormContainer = styled.div`
+  display: flex;
   align-items: center;
   flex-direction: column;
   height: 80vh;
@@ -18,7 +22,7 @@ display: flex;
   backdrop-filter: blur(8.5px);
   backdrop-filter: blur(8.5px);
   border-radius: 10px;
-  color: #ffffff;
+  color: black;
   text-transform: uppercase;
   letter-spacing: 0.4rem;
   @media only screen and (max-width: 320px) {
@@ -60,14 +64,78 @@ const WelcomeText = styled.h2`
   margin: 3rem 0 2rem 0;
 `;
 
+const InputContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 20%;
+  width: 100%;
+`;
+const ButtonContainer = styled.div`
+  margin: 1rem 0 2rem 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 
+const LoginWith = styled.h5`
+  cursor: pointer;
+`;
+
+const HorizontalRule = styled.hr`
+  width: 90%;
+  height: 0.3rem;
+  border-radius: 0.8rem;
+  border: none;
+  
+  // background-color: #ebd0d0;
+  margin: 1.5rem 0 1rem 0;
+  // backdrop-filter: blur(5px);
+`;
+
+const IconsContainer = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  margin: 2rem 0 3rem 0;
+  width: 80%;
+`;
+
+const ForgotPassword = styled.h4`
+  cursor: pointer;
+`;
 
 const Login = () => {
-  return <LoginContainer>
-<LoginFormContainer>
-  <WelcomeText>Welcome</WelcomeText>
-</LoginFormContainer>
-  </LoginContainer>;
+  return (
+    <LoginContainer>
+      <LoginFormContainer>
+        <WelcomeText>Welcome</WelcomeText>
+        <InputContainer>
+          <Input type="text" placeholder="Email" />
+          <Input type="password" placeholder="Password" />
+        </InputContainer>
+        <ButtonContainer>
+          <Button content="Sign Up" />
+        </ButtonContainer>
+        <LoginWith>OR LOGIN WITH</LoginWith>
+        <HorizontalRule />
+        <IconsContainer>
+          <Icon >
+            <FaFacebookF />
+          </Icon>
+          <Icon >
+            <FaInstagram />
+          </Icon>
+          <Icon >
+            <FaTwitter />
+          </Icon>
+        </IconsContainer>
+        <ForgotPassword>Forgot Password ?</ForgotPassword>
+      </LoginFormContainer>
+      
+    </LoginContainer>
+  );
 };
 
 export default Login;
