@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 export const NavContainerh1 = styled.div`
   background-color: lightblue;
-
   width: 50px;
   height: 50px;
   border: 3px solid black;
@@ -12,6 +11,7 @@ export const NavContainerh1 = styled.div`
   color: black;
   text-decoration: none;
 `;
+
 const NavItems = ({ title }) => {
   return (
     <div>
