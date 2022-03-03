@@ -29,7 +29,7 @@ const Nav = () => {
       <Link to="/about">
         <NavRows title="About" />
       </Link>
-      <Link to="/Admin">
+      <Link to="/Data">
         <NavRows title="Data" />
       </Link>
       <Link to="/login">
