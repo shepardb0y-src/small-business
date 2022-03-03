@@ -1,15 +1,11 @@
 import { useState } from "react";
 import axios from "axios";
+import Usercontext from "../context/UserContext";
 
-
-const Form = ({ fetchClients, editForm, clienttToEdit }) => {
+const Form = ({ fetchClients, editForm, clienttToEdit,  }) => {
   console.log("clienttToEdit", clienttToEdit);
-
   const [userName, setUserName] = useState("");
   
-
-  // console.log(firstName, lastName)
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     const newClient = {
@@ -20,7 +16,7 @@ const Form = ({ fetchClients, editForm, clienttToEdit }) => {
         // EDIT - UPDATING
         const response = await axios.put(
           `http://localhost:8080/api/v1/client/${clienttToEdit.id}`,
-          newClient
+          newClient && user
         );
       } else {
         // ADDING STUDENT
@@ -40,12 +36,11 @@ const Form = ({ fetchClients, editForm, clienttToEdit }) => {
       console.log(err);
     }
   };
-
   return (
-    <div className="ui centered grid">
-      <form className="ui form" id="form-container" onSubmit={handleSubmit}>
-        <div className="field">
-          <label className="ui left aligned container">First Name</label>
+    <div >
+      <form  onSubmit={handleSubmit}>
+        <div >
+          <label>First Name</label>
           <input
             type="text"
             name="first-name"
@@ -54,9 +49,8 @@ const Form = ({ fetchClients, editForm, clienttToEdit }) => {
             onChange={(e) => setUserName(e.target.value)}
           />
         </div>
-       
-        <div className="ui right aligned container">
-          <button className="ui button" type="submit">
+        <div>
+          <button  type="submit">
             {editForm ? "Edit" : "Submit"}
           </button>
         </div>

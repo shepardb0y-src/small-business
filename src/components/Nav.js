@@ -40,7 +40,7 @@ const Nav = () => {
           <NavRows title="Login" />
         </Link>
       ) : (
-        <Link to="/home">
+        <Link to="/">
           <NavRows title="Logout" />
         </Link>
       )}

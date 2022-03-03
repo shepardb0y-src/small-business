@@ -6,6 +6,7 @@ import Button from "../components/Button";
 import Icon from "../components/Icons";
 import Usercontext from "../context/UserContext";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import axios from "axios";
 
 const LoginContainer = styled.div`
   display: flex;
@@ -113,21 +114,38 @@ const ForgotPassword = styled.h4`
 const Login = ({ setUser }) => {
   const [username, setUsername] = useState("");
   const navigate = useNavigate();
- 
 
+  
   const handleChange = (e) => {
     setUsername(e.target.value);
     console.log(e.target.value);
   };
 
-  const handleClick = (e) => {
+  const handleClick = async (e) => {
     e.preventDefault();
     setUser(username);
     console.log("clicked");
     console.log(username);
 
+    const newClient = {
+      username: username,
+    };
+    try {
+      if (username) {
+        // ADDING STUDENT
+        const response = await axios.post(
+          "http://localhost:8080/api/v1/addclients",
+          newClient
+        );
 
-    navigate("/data")
+        // if (response.status === 200) {
+        //   console.log("hi");
+        // }
+      }
+    } catch (err) {
+      console.log(err);
+    }
+    navigate("/data");
   };
   return (
     <LoginContainer>

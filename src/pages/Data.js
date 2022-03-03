@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Form from "../components/Form";
 
-const Data = () => {
+const Data = ({user}) => {
   const [clients, setClients] = useState([]);
   const [editForm, setEditForm] = useState(false);
   const [clienttToEdit, setclienttToEdit] = useState({});
@@ -35,9 +35,9 @@ const Data = () => {
     }
   };
 
-  const handleEdit = (student) => {
+  const handleEdit = (client) => {
     setEditForm(true);
-    setclienttToEdit(student);
+    setclienttToEdit(client);
   };
 
   // console.log("this is our state", Data)
@@ -47,12 +47,13 @@ const Data = () => {
         fetchClients={fetchClients}
         editForm={editForm}
         clienttToEdit={clienttToEdit}
+        user={user}
       />
 
       <table className="ui celled table">
         <thead>
           <tr>
-            <th>First Name</th>
+            <th>UserName</th>
             <th>Edit</th>
           </tr>
         </thead>
@@ -64,11 +65,11 @@ const Data = () => {
 
                 <td data-label="Edit">
                   <button
-                    className="pencil alternate icon"
+                   
                     onClick={() => handleEdit(client)}
                   >Edit</button>
                   <button
-                    className="trash alternate icon"
+                   
                     onClick={() => deleteClient(client.id)}
                   >Delete</button>
                 </td>
