@@ -1,15 +1,18 @@
-import React from "react";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import styled from "styled-components";
 import Input from "../components/Inputs";
 import Button from "../components/Button";
 import Icon from "../components/Icons";
-import {FaFacebookF, FaInstagram, FaTwitter} from 'react-icons/fa'
+import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 
 const LoginContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: lightblue url("https://cdn.dribbble.com/users/19849/screenshots/14040157/media/168ee88f36ba350db5e001e1f7161a4d.png") no-repeat fixed center;
+  background: lightblue
+    url("https://cdn.dribbble.com/users/19849/screenshots/14040157/media/168ee88f36ba350db5e001e1f7161a4d.png")
+    no-repeat fixed center;
 `;
 const LoginFormContainer = styled.div`
   display: flex;
@@ -89,7 +92,7 @@ const HorizontalRule = styled.hr`
   height: 0.3rem;
   border-radius: 0.8rem;
   border: none;
-  
+
   // background-color: #ebd0d0;
   margin: 1.5rem 0 1rem 0;
   // backdrop-filter: blur(5px);
@@ -106,34 +109,49 @@ const ForgotPassword = styled.h4`
   cursor: pointer;
 `;
 
-const Login = () => {
+const Login = ({ setUser }) => {
+  const [username, setUsername] = useState("");
+  const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    setUsername(e.target.value);
+    console.log(e.target.value);
+  };
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    setUser(username);
+    console.log("clicked");
+    console.log(username);
+
+    navigate("/data");
+  };
   return (
     <LoginContainer>
       <LoginFormContainer>
         <WelcomeText>Welcome</WelcomeText>
-        <InputContainer>
-          <Input type="text" placeholder="Email" />
+        <InputContainer onChange={handleChange}>
+          <Input type="text" placeholder="Email" value={username} />
           <Input type="password" placeholder="Password" />
         </InputContainer>
-        <ButtonContainer>
-          <Button content="Sign Up" />
+        <ButtonContainer onClick={handleClick}>
+          <Button type="submit" content="Log in" />
         </ButtonContainer>
         <LoginWith>OR LOGIN WITH</LoginWith>
         <HorizontalRule />
         <IconsContainer>
-          <Icon >
+          <Icon>
             <FaFacebookF />
           </Icon>
-          <Icon >
+          <Icon>
             <FaInstagram />
           </Icon>
-          <Icon >
+          <Icon>
             <FaTwitter />
           </Icon>
         </IconsContainer>
         <ForgotPassword>Forgot Password ?</ForgotPassword>
       </LoginFormContainer>
-      
     </LoginContainer>
   );
 };
