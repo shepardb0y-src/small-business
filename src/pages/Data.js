@@ -61,16 +61,16 @@ const Data = () => {
             return (
               <tr key={client.id}>
                 <td data-label="username">{client.username}</td>
-                
+
                 <td data-label="Edit">
-                  <i
+                  <button
                     className="pencil alternate icon"
-                    onClick={() => handleEdit(student)}
-                  ></i>
-                  <i
+                    onClick={() => handleEdit(client)}
+                  >Edit</button>
+                  <button
                     className="trash alternate icon"
                     onClick={() => deleteClient(client.id)}
-                  ></i>
+                  >Delete</button>
                 </td>
               </tr>
             );
