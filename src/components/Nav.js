@@ -1,5 +1,5 @@
 import React from "react";
-import {  useContext } from "react";
+import { useContext } from "react";
 import NavRows from "./Nav-items";
 import Usercontext from "../context/UserContext";
 import styled from "styled-components";
@@ -17,15 +17,6 @@ export const NavContainer = styled.div`
   top: 0;
 `;
 
-// {!user ? (
-//   <li className="login">
-//     <Link className="login" to="login">
-//       Login
-//     </Link>
-//   </li>
-// ) : (
-//   <li>Logout</li>
-// )}
 const Nav = () => {
   const user = useContext(Usercontext);
   return (
@@ -44,10 +35,15 @@ const Nav = () => {
           <NavRows title="Data" />
         </Link>
       ) : null}
-
-      <Link to="/login">
-        <NavRows title="Login" />
-      </Link>
+      {!user ? (
+        <Link to="/login">
+          <NavRows title="Login" />
+        </Link>
+      ) : (
+        <Link to="/login">
+          <NavRows title="Logout" />
+        </Link>
+      )}
     </NavContainer>
   );
 };

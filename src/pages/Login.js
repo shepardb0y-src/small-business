@@ -123,6 +123,8 @@ const Login = ({ setUser }) => {
     setUser(username);
     console.log("clicked");
     console.log(username);
+  
+    
 
     navigate("/data");
   };
