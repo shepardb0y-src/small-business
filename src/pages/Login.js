@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Input from "../components/Inputs";
 import Button from "../components/Button";
 import Icon from "../components/Icons";
+import Usercontext from "../context/UserContext";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 
 const LoginContainer = styled.div`
@@ -112,6 +113,7 @@ const ForgotPassword = styled.h4`
 const Login = ({ setUser }) => {
   const [username, setUsername] = useState("");
   const navigate = useNavigate();
+ 
 
   const handleChange = (e) => {
     setUsername(e.target.value);
@@ -123,10 +125,9 @@ const Login = ({ setUser }) => {
     setUser(username);
     console.log("clicked");
     console.log(username);
-  
-    
 
-    navigate("/data");
+
+    navigate("/data")
   };
   return (
     <LoginContainer>
