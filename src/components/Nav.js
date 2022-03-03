@@ -1,5 +1,7 @@
 import React from "react";
+import {  useContext } from "react";
 import NavRows from "./Nav-items";
+import Usercontext from "../context/UserContext";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 export const NavContainer = styled.div`
@@ -11,13 +13,21 @@ export const NavContainer = styled.div`
   box-shadow: 10px 5px 5px black;
   z-index: 99;
   text-decoration: none;
-  position:sticky;
-  top:0;
+  position: sticky;
+  top: 0;
 `;
 
-
-
+// {!user ? (
+//   <li className="login">
+//     <Link className="login" to="login">
+//       Login
+//     </Link>
+//   </li>
+// ) : (
+//   <li>Logout</li>
+// )}
 const Nav = () => {
+  const user = useContext(Usercontext);
   return (
     <NavContainer>
       <Link to="/">
@@ -29,9 +39,12 @@ const Nav = () => {
       <Link to="/about">
         <NavRows title="About" />
       </Link>
-      <Link to="/Data">
-        <NavRows title="Data" />
-      </Link>
+      {user ? (
+        <Link to="/Data">
+          <NavRows title="Data" />
+        </Link>
+      ) : null}
+
       <Link to="/login">
         <NavRows title="Login" />
       </Link>
