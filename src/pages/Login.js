@@ -114,7 +114,7 @@ const Login = ({ setUser }) => {
   const [username, setUsername] = useState("");
   const navigate = useNavigate();
 
-  function validateForm() {
+  const validateForm= ()=> {
     let x = username;
     if (x === "") {
       alert("Name must be filled out");
