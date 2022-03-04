@@ -115,7 +115,15 @@ const Login = ({ setUser }) => {
   const [username, setUsername] = useState("");
   const navigate = useNavigate();
 
-  
+  function validateForm() {
+    let x = username;
+    if (x === "") {
+      alert("Name must be filled out");
+      return false;
+    }else{
+      return true;
+    }
+  }
   const handleChange = (e) => {
     setUsername(e.target.value);
     console.log(e.target.value);
@@ -126,7 +134,7 @@ const Login = ({ setUser }) => {
     setUser(username);
     console.log("clicked");
     console.log(username);
-
+    // validateForm(e);
     const newClient = {
       username: username,
     };
@@ -145,7 +153,10 @@ const Login = ({ setUser }) => {
     } catch (err) {
       console.log(err);
     }
-    navigate("/data");
+    if (validateForm(e)=== true) {
+      navigate("/data");
+    } 
+    
   };
   return (
     <LoginContainer>
