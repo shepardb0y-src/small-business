@@ -45,14 +45,14 @@ const PricesCard = () => {
             </Card>
             <Card>
                 <Content>
-                    <Title>Basic</Title>
-                    <PackagePrice>$50</PackagePrice>
+                    <Title>Intermediate</Title>
+                    <PackagePrice>$75</PackagePrice>
                 </Content>
             </Card>
             <Card>
                 <Content>
-                    <Title>Basic</Title>
-                    <PackagePrice>$50</PackagePrice>
+                    <Title>Advanced</Title>
+                    <PackagePrice>$100</PackagePrice>
                 </Content>
             </Card>
         </PricesContainer>
