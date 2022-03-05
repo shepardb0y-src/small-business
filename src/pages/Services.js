@@ -2,8 +2,7 @@ import React from "react";
 import styled from 'styled-components'
 import PricesCard from "../components/PricesCard";
 
-
-export const ServicesContainer = styled.div`
+ const ServicesContainer = styled.div`
 display:flex;
 justify-content:center;
 align-items:center;
