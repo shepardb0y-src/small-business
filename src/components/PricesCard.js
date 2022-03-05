@@ -6,6 +6,24 @@ display:flex;
 justify-content:center;
 align:items:center;
 gap:2rem;
+  @media only screen and (max-width: 320px) {
+    display:flex;
+    flex-direction:column;
+  }
+  @media only screen and (max-width: 360px) {
+    display:flex;
+    flex-direction:column;
+  }
+  @media only screen and (max-width: 411px) {
+    display:flex;
+    flex-direction:column;
+  }
+
+  @media only screen and (max-width: 768px) {
+    display:flex;
+ flex-direction:column;
+  }
+ 
 `;
 const Card = styled.div`
   display: flex;

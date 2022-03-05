@@ -15,6 +15,24 @@ export const NavContainer = styled.div`
   text-decoration: none;
   position: sticky;
   top: 0;
+  @media only screen and (max-width: 320px) {
+    display:flex;
+    flex-direction:column;
+  }
+  @media only screen and (max-width: 360px) {
+    display:flex;
+    flex-direction:column;
+  }
+  @media only screen and (max-width: 411px) {
+    display:flex;
+    flex-direction:column;
+  }
+
+  @media only screen and (max-width: 768px) {
+    display:flex;
+ flex-direction:column;
+  }
+ 
 `;
 
 const Nav = () => {
