@@ -69,6 +69,7 @@ color:grey;
 `;
 
 
+
 const PricesCard = () => {
   return (
     <PricesContainer>
