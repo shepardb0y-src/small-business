@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Modal from "./Modal";
 import { Button } from "../components/GlobalStyles"
 const PricesContainer = styled.div`
 display:flex;
@@ -73,7 +74,6 @@ const PricesCard = () => {
     <PricesContainer>
       <Card>
         <CardFront>
-          
           <Content>
             <Title>Basic</Title>
             <PackagePrice>$50</PackagePrice>
@@ -81,6 +81,7 @@ const PricesCard = () => {
         </CardFront>
         <CardBack>
           <Button> Purchase</Button>
+          <Modal/>
         </CardBack>
       </Card>
 
@@ -93,6 +94,7 @@ const PricesCard = () => {
         </CardFront>
         <CardBack>
           <Button> Purchase</Button>
+          <Modal/>
         </CardBack>
       </Card>
       <Card>
@@ -105,6 +107,7 @@ const PricesCard = () => {
         </CardFront>
         <CardBack>
           <Button> Purchase</Button>
+          <Modal/>
         </CardBack>
       </Card>
     </PricesContainer>
