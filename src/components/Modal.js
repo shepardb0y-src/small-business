@@ -39,12 +39,13 @@ const Modal = ({ setOpenModal }) => {
       <ModalContainer>
         <Button onClick={handleClick}>X</Button>
         <Title>Modal-title</Title>
-        <Input></Input>
-        <Input></Input>
-        <Input></Input>
-        <Input></Input>
-        <Input></Input>
-        <Input></Input>
+        <Input/>
+        <Input/>
+        <Input/>
+        <Input/>
+        <Input/>
+        <Input/>
+
         <Button>Submit</Button>
         <Footer> Modal-footer</Footer>
       </ModalContainer>

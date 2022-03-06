@@ -129,7 +129,6 @@ const Login = ({ setUser }) => {
   };
 
   const handleClick = async (e) => {
-    e.preventDefault();
     setUser(username);
     console.log("clicked");
     console.log(username);
