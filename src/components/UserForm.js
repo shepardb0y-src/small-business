@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 
 
-const UserForm = ({ fetchUsers, editForm2, userToEdit,  }) => {
+const UserForm = ({ fetchData, editForm2, userToEdit,  }) => {
   console.log("userToEdit",userToEdit);
   const [firstname, setFirstName] = useState("");
   
@@ -31,7 +31,7 @@ const UserForm = ({ fetchUsers, editForm2, userToEdit,  }) => {
         }
       }
 
-      fetchUsers();
+      fetchData();
     } catch (err) {
       console.log(err);
     }

@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import Usercontext from "../context/UserContext";
 
-const ClientForm = ({ fetchClients, editForm, clienttToEdit,  }) => {
+const ClientForm = ({ fetchData, editForm, clienttToEdit,  }) => {
   console.log("clienttToEdit", clienttToEdit);
   const [userName, setUserName] = useState("");
   
@@ -31,7 +31,7 @@ const ClientForm = ({ fetchClients, editForm, clienttToEdit,  }) => {
         }
       }
 
-      fetchClients();
+      fetchData();
     } catch (err) {
       console.log(err);
     }
