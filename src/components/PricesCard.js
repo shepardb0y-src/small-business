@@ -74,11 +74,10 @@ color:grey;
 const PricesCard = () => {
 
   const [openModal, setOpenModal] = useState(false);
-  
-
   const handleClick = (e)=>{
 setOpenModal(true);
   }
+
   return (
     <PricesContainer>
       <Card>
@@ -90,7 +89,7 @@ setOpenModal(true);
         </CardFront>
         <CardBack>
           <Button onClick={handleClick}> Purchase</Button>
-          {openModal &&<Modal/>}
+          {openModal &&<Modal setOpenModal={setOpenModal}/>}
         </CardBack>
       </Card>
 
@@ -102,8 +101,9 @@ setOpenModal(true);
           </Content>
         </CardFront>
         <CardBack>
-          <Button> Purchase</Button>
-          <Modal/>
+         <Button onClick={handleClick}> Purchase</Button>
+         {openModal &&<Modal setOpenModal={setOpenModal}/>}
+      
         </CardBack>
       </Card>
       <Card>
@@ -115,8 +115,9 @@ setOpenModal(true);
           </Content>
         </CardFront>
         <CardBack>
-          <Button> Purchase</Button>
-          <Modal/>
+        <Button onClick={handleClick}> Purchase</Button>
+        {openModal &&<Modal setOpenModal={setOpenModal}/>}
+        
         </CardBack>
       </Card>
     </PricesContainer>
