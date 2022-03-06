@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Modal from "./Modal";
 import { Button } from "../components/GlobalStyles"
+import {useState} from 'react'
 const PricesContainer = styled.div`
 display:flex;
 justify-content:center;
@@ -71,6 +72,13 @@ color:grey;
 
 
 const PricesCard = () => {
+
+  const [openModal, setOpenModal] = useState(false);
+  
+
+  const handleClick = (e)=>{
+setOpenModal(true);
+  }
   return (
     <PricesContainer>
       <Card>
@@ -81,8 +89,8 @@ const PricesCard = () => {
           </Content>
         </CardFront>
         <CardBack>
-          <Button> Purchase</Button>
-          <Modal/>
+          <Button onClick={handleClick}> Purchase</Button>
+          {openModal &&<Modal/>}
         </CardBack>
       </Card>
 
