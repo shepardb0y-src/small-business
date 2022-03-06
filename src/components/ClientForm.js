@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import Usercontext from "../context/UserContext";
 
-const Form = ({ fetchClients, editForm, clienttToEdit,  }) => {
+const ClientForm = ({ fetchClients, editForm, clienttToEdit,  }) => {
   console.log("clienttToEdit", clienttToEdit);
   const [userName, setUserName] = useState("");
   
@@ -16,7 +16,7 @@ const Form = ({ fetchClients, editForm, clienttToEdit,  }) => {
         // EDIT - UPDATING
         const response = await axios.put(
           `http://localhost:8080/api/v1/client/${clienttToEdit.id}`,
-          newClient && user
+          newClient 
         );
       } else {
         // ADDING STUDENT
@@ -40,10 +40,10 @@ const Form = ({ fetchClients, editForm, clienttToEdit,  }) => {
     <div >
       <form  onSubmit={handleSubmit}>
         <div >
-          <label>First Name</label>
+          <label>UserName</label>
           <input
             type="text"
-            name="first-name"
+            name="Useraname"
             placeholder={clienttToEdit.username}
             value={userName}
             onChange={(e) => setUserName(e.target.value)}
@@ -59,4 +59,4 @@ const Form = ({ fetchClients, editForm, clienttToEdit,  }) => {
   );
 };
 
-export default Form;
+export default ClientForm;
