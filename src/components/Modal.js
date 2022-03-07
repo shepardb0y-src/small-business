@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import {useState} from 'react'
-import axios from 'react'
+import axios from 'axios'
 
 const ModalBackground = styled.div`
  
@@ -48,7 +48,7 @@ const Modal = ({ setOpenModal }) => {
         zipcode: "",
         comments:""
       })
-      const [editForm2, setEditForm2] = useState(false);
+      const [editForm2, setEditForm2] = useState(true);
       const [userToEdit, setUserToEdit] = useState({});
     // const [firstname, setUserFirstname] = useState("");
     // const [lastname, setUserLastname] = useState("");
@@ -99,6 +99,7 @@ const comments = state.comments
         if (editForm2) {
     
           // ADDING STUDENT
+          //// axios is green idk why i need to 
           const response = await axios.post(
             "http://localhost:8080/api/v1/adduser",
             newClient
