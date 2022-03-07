@@ -135,6 +135,7 @@ const Data = ({ user }) => {
                   <td data-label="username">{user.firstname}</td>
                   <td data-label="username">{user.lasttname}</td>
                   <td data-label="username">{user.streetname}</td>
+                  <td data-label="username">{user.stateLocation}</td>
                   <td data-label="username">{user.zipcode}</td>
                   <td data-label="username">{user.comments}</td>
                   
