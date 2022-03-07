@@ -39,18 +39,47 @@ const Button = styled.button`
   background-color: red;
 `;
 const Modal = ({ setOpenModal }) => {
-    const [userInput, setUserInput] = useState("");
+    const [state, setState] = React.useState({
+        firstname: "",
+        lastname: "",
+        streetname:"",
+        state:"",
+        zipcode: "",
+        comments:""
+      })
+    // const [firstname, setUserFirstname] = useState("");
+    // const [lastname, setUserLastname] = useState("");
+    // const [streetname, setStreetName] = useState("");
+    // const [state, setState] = useState("");
+    // const [zipcode, setZipcode] = useState("");
+    // const [comments, setComments] = useState("");
+    
   const handleClick = (e) => {
     setOpenModal(false);
   };
-
-  const handleChange = (e) => {
-    setUserInput(e.target.value);
-    console.log(e.target.value);
-  };
+//   private String firstname;
+//   private String lastname;
+//   private String streetname;
+//   private String state;
+//   private String zipcode;
+//   private String comments;
+function handleChange(e) {
+    const value = e.target.value;
+    setState({
+      ...state,
+      [e.target.name]: value
+    });
+  }
   const handleClick2 =  (e) => {
-    e.preventDefault();
-    console.log("clicked")
+    
+    console.log(state.firstname)
+    console.log(state.lastname)
+    console.log(state.streetname)
+    console.log(state.state)
+    console.log(state.zipcode)
+    console.log(state.comments)
+    
+    
   }
   
 
@@ -59,12 +88,18 @@ const Modal = ({ setOpenModal }) => {
       <ModalContainer >
         <Button onClick={handleClick}>X</Button>
         <Title>Modal-title</Title>
-        <Input onChange={handleChange}/>
-        <Input onChange={handleChange} />
-        <Input onChange={handleChange}/>
-        <Input onChange={handleChange}/>
-        <Input onChange={handleChange}/>
-        <Input onChange={handleChange}/>
+        <Input value={state.firstname}  type="text"
+          name="firstname" onChange={handleChange}/>
+        <Input value={state.lastname} type="text"
+          name="lastname" onChange={handleChange} />
+        <Input value={state.streetname} type="text"
+          name="streetname" onChange={handleChange}/>
+        <Input value={state.state} type="text"
+          name="state" onChange={handleChange}/>
+        <Input value={state.zipcode} type="text"
+          name="zipcode"onChange={handleChange}/>
+        <Input value={state.comments} type="text"
+          name="comments"onChange={handleChange}/>
         <ButtonContainer onClick={handleClick2}>
           <Button type="submit">Submit</Button>
         </ButtonContainer>
