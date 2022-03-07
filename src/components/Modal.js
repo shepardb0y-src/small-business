@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import {useState} from 'react'
 
 const ModalBackground = styled.div`
  
@@ -27,26 +28,46 @@ const Input = styled.input`
 const Footer = styled.div`
   background-color: orange;
 `;
+const ButtonContainer = styled.div`
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
 const Button = styled.button`
   background-color: red;
 `;
 const Modal = ({ setOpenModal }) => {
+    const [userInput, setUserInput] = useState("");
   const handleClick = (e) => {
     setOpenModal(false);
   };
+
+  const handleChange = (e) => {
+    setUserInput(e.target.value);
+    console.log(e.target.value);
+  };
+  const handleClick2 =  (e) => {
+    e.preventDefault();
+    console.log("clicked")
+  }
+  
+
   return (
     <ModalBackground>
-      <ModalContainer>
+      <ModalContainer >
         <Button onClick={handleClick}>X</Button>
         <Title>Modal-title</Title>
-        <Input/>
-        <Input/>
-        <Input/>
-        <Input/>
-        <Input/>
-        <Input/>
-
-        <Button>Submit</Button>
+        <Input onChange={handleChange}/>
+        <Input onChange={handleChange} />
+        <Input onChange={handleChange}/>
+        <Input onChange={handleChange}/>
+        <Input onChange={handleChange}/>
+        <Input onChange={handleChange}/>
+        <ButtonContainer onClick={handleClick2}>
+          <Button type="submit">Submit</Button>
+        </ButtonContainer>
         <Footer> Modal-footer</Footer>
       </ModalContainer>
     </ModalBackground>
