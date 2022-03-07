@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import {useState} from 'react'
+import axios from 'react'
 
 const ModalBackground = styled.div`
  
@@ -47,6 +48,8 @@ const Modal = ({ setOpenModal }) => {
         zipcode: "",
         comments:""
       })
+      const [editForm2, setEditForm2] = useState(false);
+      const [userToEdit, setUserToEdit] = useState({});
     // const [firstname, setUserFirstname] = useState("");
     // const [lastname, setUserLastname] = useState("");
     // const [streetname, setStreetName] = useState("");
@@ -70,18 +73,43 @@ function handleChange(e) {
       [e.target.name]: value
     });
   }
-  const handleClick2 =  (e) => {
+  const handleClick2 = async (e) => {
+      const firstname = state.firstname
+    //   console.table(firstname)
+      const lastname = state.lastname
+    //   console.log(state.lastname)
+      const streetname = state.streetname
+    // console.log(state.streetname)
+    //need to recreate databas and chand the staet namee to usState
+        // const state= state.state
+    // console.log(state.state)
+    const zipcode = state.zipcode
+    // console.log(state.zipcode)
+const comments = state.comments
+    // console.log(state.comments)
+    const newClient = {
+        firstname: firstname,
+        lastname: lastname,
+        streetname: streetname,
+        // state: state,
+        zipcode: zipcode,
+        comments: comments,
+      };
+      try {
+        if (editForm2) {
     
-    console.log(state.firstname)
-    console.log(state.lastname)
-    console.log(state.streetname)
-    console.log(state.state)
-    console.log(state.zipcode)
-    console.log(state.comments)
-    
-    
-  }
-  
+          // ADDING STUDENT
+          const response = await axios.post(
+            "http://localhost:8080/api/v1/adduser",
+            newClient
+          );
+          }
+  console.log(newClient)
+        
+      } catch (err) {
+        console.log(err);
+      }
+    };
 
   return (
     <ModalBackground>
