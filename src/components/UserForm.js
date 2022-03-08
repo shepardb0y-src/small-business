@@ -1,10 +1,13 @@
 import { useState } from "react";
 import axios from "axios";
 import React from "react";
+import { useContext } from "react";
+import Usercontext from "../context/UserContext";
 
 
 const UserForm = ({ fetchData, editForm2, userToEdit, }) => {
   console.log("userToEdit",userToEdit);
+  const user = useContext(Usercontext);
   
   const [state, setState] = React.useState({
     firstname: "",
@@ -36,7 +39,7 @@ const UserForm = ({ fetchData, editForm2, userToEdit, }) => {
         // ADDING STUDENT
         const response = await axios.post(
           "http://localhost:8080/api/v1/adduser",
-          newClient, console.log()
+          newClient
         );
 
         // if (response.status === 200) {

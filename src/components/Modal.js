@@ -118,18 +118,18 @@ const comments = state.comments
         <Button onClick={handleClick}>X</Button>
         <Title>Modal-title</Title>
         <Input value={state.firstname}  type="text"
-          name="firstname" onChange={handleChange}/>
+          name="firstname" onChange={handleChange}  placeholder="firtsname"/>
         <Input value={state.lastname} type="text"
-          name="lastname" onChange={handleChange} />
+          name="lastname" onChange={handleChange} placeholder="lastsname"/>
         <Input value={state.streetname} type="text"
-          name="streetname" onChange={handleChange}/>
+          name="streetname" onChange={handleChange} placeholder="Street name and number"/>
         <Input value={state.stateLocation} type="text"
-          name="stateLocation" onChange={handleChange}/>
+          name="stateLocation" onChange={handleChange} placeholder="state"/>
         <Input value={state.zipcode} type="text"
-          name="zipcode"onChange={handleChange}/>
+          name="zipcode"onChange={handleChange} placeholder="zipcode"/>
         <Input value={state.comments} type="text"
-          name="comments"onChange={handleChange}/>
-        <ButtonContainer onClick={handleClick2}>
+          name="comments"onChange={handleChange} placeholder="comments"/>
+        <ButtonContainer onClick={handleClick2} >
           <Button type="submit">Submit</Button>
         </ButtonContainer>
         <Footer> Modal-footer</Footer>
