@@ -37,6 +37,10 @@ export const NavContainer = styled.div`
 
 const Nav = () => {
   const user = useContext(Usercontext);
+ const  handleClick = (()=>{
+    setUser(null)
+    console.log(user)
+  })
   return (
     <NavContainer>
       <Link to="/">
@@ -58,7 +62,7 @@ const Nav = () => {
           <NavRows title="Login" />
         </Link>
       ) : (
-        <Link to="/">
+        <Link onClick={handleClick} to="/">
           <NavRows title="Logout" />
         </Link>
       )}
