@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-
+import { Button } from "../components/GlobalStyles";
+import { useNavigate } from "react-router-dom";
 
  export const MainStyled = styled.div`
   display: flex;
