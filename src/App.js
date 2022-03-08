@@ -13,10 +13,6 @@ function App() {
   const [user, setUser] = useState("");
 
 
-// axios call
-
-
-
 console.log(user)
 
   return (
