@@ -1,15 +1,24 @@
 import { useState } from "react";
 import axios from "axios";
+import React from "react";
 
 
 const UserForm = ({ fetchData, editForm2, userToEdit, }) => {
   console.log("userToEdit",userToEdit);
-  const [firstname, setFirstName] = useState("");
+  
+  const [state, setState] = React.useState({
+    firstname: "",
+    lastname: "",
+    streetname:"",
+    stateLocation:"",
+    zipcode: "",
+    comments:""
+  })
   
   const handleSubmit = async (e) => {
     e.preventDefault();
     const newClient = {
-      firstname: firstname
+      firstname: state.firstname
     };
     try {
       if (editForm2) {
@@ -25,10 +34,10 @@ const UserForm = ({ fetchData, editForm2, userToEdit, }) => {
           newClient, console.log()
         );
 
-        if (response.status === 200) {
-          setFirstName("");
+        // if (response.status === 200) {
+        //   setState("");
          
-        }
+        // }
       }
 
       fetchData();
@@ -36,6 +45,13 @@ const UserForm = ({ fetchData, editForm2, userToEdit, }) => {
       console.log(err);
     }
   };
+  function handleChange(e) {
+    const value = e.target.value;
+    setState({
+      ...state,
+      [e.target.name]: value
+    });
+  }
   return (
     <div >
       <form  onSubmit={handleSubmit}>
@@ -43,10 +59,9 @@ const UserForm = ({ fetchData, editForm2, userToEdit, }) => {
           <label>First Name</label>
           <input
             type="text"
-            name="first-name"
             placeholder={userToEdit.firstname}
-            value={firstname}
-            onChange={(e) => setFirstName(e.target.value)}
+            value={state.firstname}
+          name="firstname" onChange={handleChange}
           />
         </div>
         <div>
