@@ -8,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     // max-width: 80%;
   //  border: 10px solid red;
+  
   }
 `;
 export const Button = styled.button`
