@@ -75,8 +75,8 @@ const Data = ({ user }) => {
     setclienttToEdit(client);
   };
   const handleEdit2 = (user) => {
-    setEditForm(true);
-    setclienttToEdit(user);
+    setEditForm2(true);
+    setUserToEdit(user);
   };
 
   // console.log("this is our state", Data)

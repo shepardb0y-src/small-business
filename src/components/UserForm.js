@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 
 
-const UserForm = ({ fetchData, editForm2, userToEdit,  }) => {
+const UserForm = ({ fetchData, editForm2, userToEdit, }) => {
   console.log("userToEdit",userToEdit);
   const [firstname, setFirstName] = useState("");
   
@@ -15,14 +15,14 @@ const UserForm = ({ fetchData, editForm2, userToEdit,  }) => {
       if (editForm2) {
         // EDIT - UPDATING
         const response = await axios.put(
-          `http://localhost:8080/api/v1/client/${userToEdit.id}`,
+          `http://localhost:8080/api/v1/user/${userToEdit.id}`,
           newClient 
         );
       } else {
         // ADDING STUDENT
         const response = await axios.post(
           "http://localhost:8080/api/v1/adduser",
-          newClient
+          newClient, console.log()
         );
 
         if (response.status === 200) {
