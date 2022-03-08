@@ -18,7 +18,12 @@ const UserForm = ({ fetchData, editForm2, userToEdit, }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const newClient = {
-      firstname: state.firstname
+      firstname: state.firstname,
+      lastname: state.lastname,
+      streetname: state.streetname,
+      stateLocation: state.stateLocation,
+      zipcode: state.zipcode,
+      comments: state.comments
     };
     try {
       if (editForm2) {
@@ -52,6 +57,11 @@ const UserForm = ({ fetchData, editForm2, userToEdit, }) => {
       [e.target.name]: value
     });
   }
+  console.log(state.lastname)
+  console.log(state.streetname)
+  console.log(state.stateLocation)
+  console.log(state.comments)
+  console.log(state.firstname)
   return (
     <div >
       <form  onSubmit={handleSubmit}>
@@ -62,6 +72,42 @@ const UserForm = ({ fetchData, editForm2, userToEdit, }) => {
             placeholder={userToEdit.firstname}
             value={state.firstname}
           name="firstname" onChange={handleChange}
+          />
+           <label>Last Name</label>
+          <input
+            type="text"
+            placeholder={userToEdit.firstname}
+            value={state.lastname}
+          name="lastname" onChange={handleChange}
+          />
+           <label>Street Name</label>
+          <input
+            type="text"
+            placeholder={userToEdit.firstname}
+            value={state.streetname}
+          name="streetname" onChange={handleChange}
+          />
+           <label>State</label>
+          <input
+            type="text"
+            placeholder={userToEdit.firstname}
+            value={state.stateLocation}
+          name="stateLocation" onChange={handleChange}
+          />
+           <label>Zipcode</label>
+          <input
+            type="text"
+            placeholder={userToEdit.firstname}
+            value={state.zipcode}
+          name="zipcode" onChange={handleChange}
+        
+          />
+           <label>Comments</label>
+          <input
+            type="text"
+            placeholder={userToEdit.firstname}
+            value={state.comments}
+          name="comments" onChange={handleChange}
           />
         </div>
         <div>
