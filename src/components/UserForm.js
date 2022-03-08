@@ -76,28 +76,28 @@ const UserForm = ({ fetchData, editForm2, userToEdit, }) => {
            <label>Last Name</label>
           <input
             type="text"
-            placeholder={userToEdit.firstname}
+            placeholder={userToEdit.lastname}
             value={state.lastname}
           name="lastname" onChange={handleChange}
           />
            <label>Street Name</label>
           <input
             type="text"
-            placeholder={userToEdit.firstname}
+            placeholder={userToEdit.streetname}
             value={state.streetname}
           name="streetname" onChange={handleChange}
           />
            <label>State</label>
           <input
             type="text"
-            placeholder={userToEdit.firstname}
+            placeholder={userToEdit.stateLocation}
             value={state.stateLocation}
           name="stateLocation" onChange={handleChange}
           />
            <label>Zipcode</label>
           <input
             type="text"
-            placeholder={userToEdit.firstname}
+            placeholder={userToEdit.zipcode}
             value={state.zipcode}
           name="zipcode" onChange={handleChange}
         
@@ -105,7 +105,7 @@ const UserForm = ({ fetchData, editForm2, userToEdit, }) => {
            <label>Comments</label>
           <input
             type="text"
-            placeholder={userToEdit.firstname}
+            placeholder={userToEdit.comments}
             value={state.comments}
           name="comments" onChange={handleChange}
           />
