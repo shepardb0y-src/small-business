@@ -4,6 +4,7 @@ import { Button } from "../components/GlobalStyles";
 import { useNavigate } from "react-router-dom";
 import Carousel from "./Carousel";
 
+
 export const MainStyled = styled.div`
   display: flex;
   flex-direction: column;
@@ -35,6 +36,7 @@ const Main = () => {
 
   return (
     <MainStyled>
+      
       <CompanyName>Champs Cleaning And Move Out LLC</CompanyName>
       <Image
         src="https://cdn.dribbble.com/users/2837665/screenshots/11479334/media/8997ac76da4966512cfb07a2d8a3ed2b.png?compress=1&resize=1200x900&vertical=top"
