@@ -71,10 +71,7 @@ const Carousel = ({ slides }) => {
       {CarouselImageData.map((slide, index) => {
         return (
           <ImageContainer>
-              {
-                  // {index === current ? 'slide active: 'slide'}
-// key={index}
-              }
+        
             {index === current && (
               <Image src={slide.images} alt="previous works" />
             )}
