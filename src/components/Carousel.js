@@ -38,6 +38,7 @@ const RightIcon = styled.div`
 const ArrowContainer = styled.div`
   position: absolute;
   height: 100px;
+  left:925px;
 `;
 const ImageContainer = styled.div`
 
@@ -54,9 +55,9 @@ const Carousel = ({ slides }) => {
     setCurrent(current === 0 ? length - 1 : current - 1);
     console.log("click2");
   };
-  if (!Array.isArray(slides) || slides.length <= 0) {
-    return null;
-  }
+//   if (!Array.isArray(slides) || slides.length <= 0) {
+//     return null;
+//   }
   return (
     <Slider>
       <ArrowContainer>
