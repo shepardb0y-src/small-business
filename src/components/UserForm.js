@@ -30,22 +30,16 @@ const UserForm = ({ fetchData, editForm2, userToEdit, }) => {
     };
     try {
       if (editForm2) {
-        // EDIT - UPDATING
         const response = await axios.put(
           `http://localhost:8080/api/v1/user/${userToEdit.id}`,
           newClient 
         );
       } else {
-        // ADDING STUDENT
         const response = await axios.post(
           "http://localhost:8080/api/v1/adduser",
           newClient
         );
-
-        // if (response.status === 200) {
-        //   setState("");
-         
-        // }
+   
       }
 
       fetchData();
