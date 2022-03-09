@@ -9,7 +9,6 @@ import { useState } from "react";
 const Slider = styled.div`
   position: relative;
   height: 50%;
-
   display: flex;
   justify-content: center;
   align-items: center;

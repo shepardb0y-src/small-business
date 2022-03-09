@@ -47,13 +47,7 @@ const Modal = ({ setOpenModal }) => {
   });
   const [editForm2, setEditForm2] = useState(true);
   const [userToEdit, setUserToEdit] = useState({});
-  // const [firstname, setUserFirstname] = useState("");
-  // const [lastname, setUserLastname] = useState("");
-  // const [streetname, setStreetName] = useState("");
-  // const [state, setState] = useState("");
-  // const [zipcode, setZipcode] = useState("");
-  // const [comments, setComments] = useState("");
-
+ 
   const handleClick = (e) => {
     setOpenModal(false);
   };
