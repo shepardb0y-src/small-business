@@ -8,7 +8,7 @@ import { useState } from "react";
 
 const Slider = styled.div`
   position: relative;
-  height: 30vh;
+  height: 50%;
 
   display: flex;
   justify-content: center;
@@ -16,8 +16,8 @@ const Slider = styled.div`
   // flex-wrap:wrap;
 `;
 const Image = styled.img`
-  width: 1000px;
-  height: 600px;
+  width: 900px;
+  height: 500px;
   border-radius: 10px;
 `;
 
