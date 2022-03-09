@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Button } from "../components/GlobalStyles";
 import { useNavigate } from "react-router-dom";
 import Carousel from "./Carousel";
+import CarouselImageData from "./CarouselImageData";
 
 
 export const MainStyled = styled.div`
@@ -42,7 +43,7 @@ const Main = () => {
         src="https://cdn.dribbble.com/users/2837665/screenshots/11479334/media/8997ac76da4966512cfb07a2d8a3ed2b.png?compress=1&resize=1200x900&vertical=top"
         alt="moving-cough-image"
       ></Image>{" "}
-      <Carousel />
+      <Carousel slides={CarouselImageData} />
       <Button onClick={handleClick}>Learn More!</Button>
     </MainStyled>
   );

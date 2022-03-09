@@ -19,3 +19,4 @@ const StyledIcon = styled.div`
     height: 1.5rem;
   }
 `;
+
