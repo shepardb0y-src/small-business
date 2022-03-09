@@ -4,10 +4,11 @@ My application comes witha few features I have a user authentication represented
 
 In the futer i would like to add the optin for the user to change the price details and services they offer to user on thier own.
 
-
+ The Link to my Backend github is https://github.com/shepardb0y-src/smallbusiness-backend
  The Link to my figma is https://www.figma.com/file/4zEjicOpkR52fWhRD6r8sm/Moving-%26-Cleaning-Services?node-id=0%3A1
- 
+
 For my login scrren i followed this video on youtube for inspiration https://www.youtube.com/watch?v=xJVPydZNA14&t=357s
 
 to create my image carousel I used this youtube video for inspiration
 https://www.youtube.com/watch?v=l1MYfu5YWHc&t=561s
+
