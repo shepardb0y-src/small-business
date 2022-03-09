@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
 import CarouselImageData from "./CarouselImageData";
-import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
 import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
 import { useState } from "react";
 
@@ -46,31 +44,22 @@ const ImageContainer = styled.div`
 const Carousel = ({ slides }) => {
   const [current, setCurrent] = useState(0);
   const length = slides.length;
-//   const handleClicknextSlide = () => {
-//     setCurrent(current === 0 ? length - 1 : current + 1);
-//     console.log("click");
-//   };
   const handleClickSlide = () => {
     setCurrent(current === 0 ? length - 1 : current - 1);
     console.log("click2");
   };
-//   if (!Array.isArray(slides) || slides.length <= 0) {
-//     return null;
-//   }
+
   return (
     <Slider>
       <ArrowContainer>
         <RightIcon>
           <ArrowCircleRightIcon onClick={handleClickSlide} />
         </RightIcon>
-        {/* <RightIcon>  <ArrowCircleRightIcon onClick={handleClicknextSlide} /></RightIcon> */}
-        
       </ArrowContainer>
 
       {CarouselImageData.map((slide, index) => {
         return (
           <ImageContainer>
-        
             {index === current && (
               <Image src={slide.images} alt="previous works" />
             )}
