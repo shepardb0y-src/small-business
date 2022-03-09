@@ -110,14 +110,14 @@ const Modal = ({ setOpenModal }) => {
         <Input
           value={state.lastname}
           type="text"
-          name="Last Name"
+          name="lastname"
           onChange={handleChange}
           placeholder="lastsname"
         />
         <Input
           value={state.streetname}
           type="text"
-          name="Street Name"
+          name="streetname"
           onChange={handleChange}
           placeholder="Street name and number"
         />
