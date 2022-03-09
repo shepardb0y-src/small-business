@@ -76,8 +76,7 @@ const Modal = ({ setOpenModal }) => {
     };
     try {
       if (editForm2) {
-        // ADDING STUDENT
-        //// axios is green idk why i need to
+        
         const response = await axios.post(
           "http://localhost:8080/api/v1/adduser",
           newClient
