@@ -37,7 +37,7 @@ const Button = styled.button`
   background-color: red;
 `;
 const Modal = ({ setOpenModal }) => {
-  const [state, setState] = React.useState({
+  const [state, setState] = useState({
     firstname: "",
     lastname: "",
     streetname: "",
