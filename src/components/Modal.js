@@ -105,19 +105,19 @@ const Modal = ({ setOpenModal }) => {
           type="text"
           name="firstname"
           onChange={handleChange}
-          placeholder="firtsname"
+          placeholder="First Name"
         />
         <Input
           value={state.lastname}
           type="text"
-          name="lastname"
+          name="Last Name"
           onChange={handleChange}
           placeholder="lastsname"
         />
         <Input
           value={state.streetname}
           type="text"
-          name="streetname"
+          name="Street Name"
           onChange={handleChange}
           placeholder="Street name and number"
         />
@@ -126,21 +126,21 @@ const Modal = ({ setOpenModal }) => {
           type="text"
           name="stateLocation"
           onChange={handleChange}
-          placeholder="state"
+          placeholder="State"
         />
         <Input
           value={state.zipcode}
           type="text"
           name="zipcode"
           onChange={handleChange}
-          placeholder="zipcode"
+          placeholder="Zipcode"
         />
         <Input
           value={state.comments}
           type="text"
           name="comments"
           onChange={handleChange}
-          placeholder="comments"
+          placeholder="Email-adresss"
         />
         <ButtonContainer onClick={handleClick2}>
           <Button type="submit">Submit</Button>
