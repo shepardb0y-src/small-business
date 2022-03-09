@@ -49,7 +49,7 @@ const Main = () => {
         src="https://cdn.dribbble.com/users/2837665/screenshots/11479334/media/8997ac76da4966512cfb07a2d8a3ed2b.png?compress=1&resize=1200x900&vertical=top"
         alt="moving-cough-image"
       ></Image>{" "}
-      <PreviousWork>Take a look at our prevous Work!</PreviousWork>
+      <PreviousWork> Check out our previous Work!</PreviousWork>
       <Carousel slides={CarouselImageData} />
       <Button onClick={handleClick}>Learn More!</Button>
     </MainStyled>
