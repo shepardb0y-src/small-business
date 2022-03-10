@@ -31,12 +31,12 @@ const UserForm = ({ fetchData, editForm2, userToEdit, }) => {
     try {
       if (editForm2) {
         const response = await axios.put(
-          `http://localhost:8080/api/v1/user/${userToEdit.id}`,
+          `https://small-business-app.herokuapp.com/api/v1/user/${userToEdit.id}`,
           newClient 
         );
       } else {
         const response = await axios.post(
-          "http://localhost:8080/api/v1/adduser",
+          "https://small-business-app.herokuapp.com/api/v1/adduser",
           newClient
         );
    

@@ -35,10 +35,10 @@ const Data = ({ user }) => {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:8080/api/v1/allclients"
+        "https://small-business-app.herokuapp.com/api/v1/allclients"
       );
       const response2 = await axios.get(
-        "http://localhost:8080/api/v1/allusers"
+        "https://small-business-app.herokuapp.com/api/v1/allusers"
       );
       console.log(response);
       setClients(response.data);
@@ -62,7 +62,7 @@ const Data = ({ user }) => {
   const deleteUser = async (id) => {
     try {
       const response = await axios.delete(
-        `http://localhost:8080/api/v1/user/${id}`
+        `https://small-business-app.herokuapp.com/api/v1/user/${id}`
       );
       fetchData();
     } catch (err) {
