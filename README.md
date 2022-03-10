@@ -12,3 +12,4 @@ For my login scrren i followed this video on youtube for inspiration https://www
 to create my image carousel I used this youtube video for inspiration
 https://www.youtube.com/watch?v=l1MYfu5YWHc&t=561s
 
+The link to my deployed app is https://smallbusiness-frontend.herokuapp.com/
