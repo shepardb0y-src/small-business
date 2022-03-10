@@ -139,7 +139,7 @@ const Login = ({ setUser }) => {
       if (username) {
        
         const response = await axios.post(
-          "http://localhost:8080/api/v1/addclients",
+          "https://smallbusiness-frontend.herokuapp.com/api/v1/addclients",
           newClient
         );
       }

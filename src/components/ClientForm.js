@@ -13,13 +13,13 @@ const ClientForm = ({ fetchData, editForm, clienttToEdit,  }) => {
     };
     try {
       if (editForm) {
-        // EDIT - UPDATING
+
         const response = await axios.put(
           `https://small-business-app.herokuapp.com/api/v1/client/${clienttToEdit.id}`,
           newClient 
         );
       } else {
-        // ADDING STUDENT
+       
         const response = await axios.post(
           "https://small-business-app.herokuapp.com/api/v1/addclients",
           newClient
