@@ -78,7 +78,7 @@ const Modal = ({ setOpenModal }) => {
       if (editForm2) {
         
         const response = await axios.post(
-          "http://localhost:8080/api/v1/adduser",
+          "https://small-business-app.herokuapp.com/api/v1/adduser",
           newClient
         );
       }
