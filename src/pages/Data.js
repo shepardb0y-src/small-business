@@ -52,7 +52,7 @@ const Data = ({ user }) => {
   const deleteClient = async (id) => {
     try {
       const response = await axios.delete(
-        `http://localhost:8080/api/v1/client/${id}`
+        `https://small-business-app.herokuapp.com/api/v1/client/${id}`
       );
       fetchData();
     } catch (err) {
