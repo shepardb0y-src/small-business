@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 import Carousel from "./Carousel";
 import CarouselImageData from "./CarouselImageData";
 
-
 export const MainStyled = styled.div`
   display: flex;
   flex-direction: column;
@@ -16,7 +15,7 @@ export const MainStyled = styled.div`
   gap: 2rem;
 `;
 export const Image = styled.img`
-  padding: 10%;
+  // padding: 10%;
   //   border: 10px red solid;
   width: 50%;
   height: 50%;
@@ -46,10 +45,10 @@ const Main = () => {
     <MainStyled>
       <CompanyName>Champs Cleaning And Move Out LLC</CompanyName>
       <Image
-        src="https://cdn.dribbble.com/users/2837665/screenshots/11479334/media/8997ac76da4966512cfb07a2d8a3ed2b.png?compress=1&resize=1200x900&vertical=top"
+        src="https://www.neighbor.com/storage-blog/wp-content/uploads/2020/10/How-to-Move-a-Couch-Neighbor.jpg"
         alt="moving-cough-image"
       ></Image>{" "}
-      <PreviousWork> Check out our previous Work!</PreviousWork>
+      <PreviousWork> View previous Work!</PreviousWork>
       <Carousel slides={CarouselImageData} />
       <Button onClick={handleClick}>Learn More!</Button>
     </MainStyled>
